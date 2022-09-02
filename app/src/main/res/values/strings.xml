@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">pdm122</string>
+    <string name="score">Your score: %s</string>
+    <string name="time_left">Time left %s</string>
+    <string name="end_game">Game Over %s</string>
+
 </resources>

@@ -16,9 +16,11 @@ class MainActivity : AppCompatActivity() {
         val btnHide: Button = findViewById(R.id.btnHideImage)
         val imageClon: ImageView = findViewById(R.id.clon)
         val btnShow: Button = findViewById(R.id.btnShowImage)
+        val btnJuegoView: Button = findViewById(R.id.btnShowJuegoView)
         val btnToastView: Button = findViewById(R.id.btnShowToast)
         val btnSumTwoNumbersView: Button = findViewById(R.id.btnSumTwoNumbersView)
         val btnShowIMCView: Button = findViewById(R.id.btnImcShowView)
+        val btnpptChangeView: Button = findViewById(R.id.btnpptView)
 
         btnHide.setOnClickListener {
             imageClon.isVisible = false
@@ -39,6 +41,18 @@ class MainActivity : AppCompatActivity() {
         }
         btnShowIMCView.setOnClickListener {
             val intent = Intent(this,IMC::class.java).apply {
+            }
+            startActivity(intent)
+        }
+        btnJuegoView.setOnClickListener {
+            val intent = Intent(this,TimeFighter::class.java).apply {
+
+            }
+            startActivity(intent)
+        }
+        btnpptChangeView.setOnClickListener {
+            val intent = Intent(this,PiedraPapelTijera::class.java).apply {
+
             }
             startActivity(intent)
         }

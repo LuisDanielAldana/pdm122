@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">pdm122</string>
+    <string name="score">Tu puntaje: %s</string>
+    <string name="time_left">Tiempo restante %s</string>
+    <string name="end_game">Fin del juego %s</string>
+</resources>
