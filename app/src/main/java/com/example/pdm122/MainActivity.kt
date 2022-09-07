@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val btnSumTwoNumbersView: Button = findViewById(R.id.btnSumTwoNumbersView)
         val btnShowIMCView: Button = findViewById(R.id.btnImcShowView)
         val btnpptChangeView: Button = findViewById(R.id.btnpptView)
+        val btnPrimerParcial: Button = findViewById((R.id.btnPrimerParcial))
 
         btnHide.setOnClickListener {
             imageClon.isVisible = false
@@ -52,6 +53,12 @@ class MainActivity : AppCompatActivity() {
         }
         btnpptChangeView.setOnClickListener {
             val intent = Intent(this,PiedraPapelTijera::class.java).apply {
+
+            }
+            startActivity(intent)
+        }
+        btnPrimerParcial.setOnClickListener {
+            val intent = Intent(this,PrimerParcial::class.java).apply {
 
             }
             startActivity(intent)
