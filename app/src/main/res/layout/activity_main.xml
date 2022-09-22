@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4EBE8"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,20 +18,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Luis Daniel Aldana de la Rosa"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/clon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clon"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
 
     <ImageView
         android:id="@+id/clon"
         android:layout_width="105dp"
         android:layout_height="151dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/imagen" />
@@ -33,20 +40,21 @@
         android:id="@+id/btnHideImage"
         android:layout_width="95dp"
         android:layout_height="38dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:text="Ocultar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clon" />
 
     <Button
         android:id="@+id/btnShowImage"
-        android:layout_width="101dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="98dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
         android:text="Mostrar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHideImage" />
 
@@ -54,21 +62,21 @@
         android:id="@+id/btnShowToast"
         android:layout_width="96dp"
         android:layout_height="53dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="48dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnShowImage" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnSumTwoNumbersView"
-        android:layout_width="185dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="114dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="20dp"
         android:text="Sumar dos numeros"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.831"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnShowToast" />
 
@@ -76,10 +84,10 @@
         android:id="@+id/btnImcShowView"
         android:layout_width="82dp"
         android:layout_height="41dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="IMC"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.778"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSumTwoNumbersView" />
 
@@ -87,10 +95,10 @@
         android:id="@+id/btnShowJuegoView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="Time Fighter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.815"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnImcShowView" />
 
@@ -98,20 +106,34 @@
         android:id="@+id/btnpptView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Piedra-Papel-Tijera"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.883"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnShowJuegoView"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintTop_toBottomOf="@+id/btnShowJuegoView" />
 
     <Button
         android:id="@+id/btnPrimerParcial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Primer Parcial"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="616dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnpptView" />
+
+    <Button
+        android:id="@+id/btnLottieAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Lottie Animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPrimerParcial" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val btnShowIMCView: Button = findViewById(R.id.btnImcShowView)
         val btnpptChangeView: Button = findViewById(R.id.btnpptView)
         val btnPrimerParcial: Button = findViewById((R.id.btnPrimerParcial))
+        val btnLottieView: Button = findViewById(R.id.btnLottieAnimation)
 
         btnHide.setOnClickListener {
             imageClon.isVisible = false
@@ -59,6 +60,12 @@ class MainActivity : AppCompatActivity() {
         }
         btnPrimerParcial.setOnClickListener {
             val intent = Intent(this,PrimerParcial::class.java).apply {
+
+            }
+            startActivity(intent)
+        }
+        btnLottieView.setOnClickListener {
+            val intent = Intent(this,LottieView::class.java).apply {
 
             }
             startActivity(intent)
