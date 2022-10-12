@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() {
         val btnpptChangeView: Button = findViewById(R.id.btnpptView)
         val btnPrimerParcial: Button = findViewById((R.id.btnPrimerParcial))
         val btnLottieView: Button = findViewById(R.id.btnLottieAnimation)
+        val btnTestView: Button = findViewById(R.id.btnGeographyTest)
+        val btnPokedex: Button = findViewById(R.id.btnPokedex)
+        val btnQrView: Button = findViewById(R.id.btnQrReader)
+        val btnDialogueView: Button = findViewById(R.id.btnDialogue)
+        val btnSegundoParcial: Button = findViewById(R.id.btnSegundoParcial)
 
         btnHide.setOnClickListener {
             imageClon.isVisible = false
@@ -66,6 +71,36 @@ class MainActivity : AppCompatActivity() {
         }
         btnLottieView.setOnClickListener {
             val intent = Intent(this,LottieView::class.java).apply {
+
+            }
+            startActivity(intent)
+        }
+        btnTestView.setOnClickListener {
+            val intent = Intent(this,GeographyTest::class.java).apply {
+
+            }
+            startActivity(intent)
+        }
+        btnPokedex.setOnClickListener {
+            val intent = Intent(this,Pokedex::class.java).apply {
+
+            }
+            startActivity(intent)
+        }
+        btnQrView.setOnClickListener {
+            val intent = Intent(this,QrReader::class.java).apply {
+
+            }
+            startActivity(intent)
+        }
+        btnDialogueView.setOnClickListener {
+            val intent = Intent(this,Dialogos::class.java).apply {
+
+            }
+            startActivity(intent)
+        }
+        btnSegundoParcial.setOnClickListener {
+            val intent = Intent(this,SegundoExamenParcial::class.java).apply {
 
             }
             startActivity(intent)

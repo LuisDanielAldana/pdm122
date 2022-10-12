@@ -4,4 +4,12 @@
     <string name="score">Tu puntaje: %s</string>
     <string name="time_left">Tiempo restante %s</string>
     <string name="end_game">Fin del juego %s</string>
+    <string name="question_australia">Canberra es la capital de Australia.</string>
+    <string name="question_oceans">El Oceano Pacifico es mas grande que el Oceano Atlantico.</string>
+    <string name="question_mideast">El Canal de Suez conecta al rio rojo y el Oceano Indico.</string>
+    <string name="question_africa">La fuente del Rio Nilo se encuentra en Egipto.</string>
+    <string name="question_americas">El Amazonas es el rio mas largo de America.</string>
+    <string name="question_asia">El Lago Baikal es el laho de agua dulce mas viejo y profundo del mundo.</string>
+    <string name="correctToast">Correcto.</string>
+    <string name="badToast">Incorrecto.</string>
 </resources>
