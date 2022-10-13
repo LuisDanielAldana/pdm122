@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.budiyev.android.codescanner.AutoFocusMode
@@ -20,11 +21,11 @@ class LeerPlacaQrScanner : AppCompatActivity() {
     private lateinit var codeScanner: CodeScanner
     val MY_CAMERA_PERMISSION_REQUEST = 1111
     private lateinit var scannerView: CodeScannerView
-
     private lateinit var txtMarca: TextView
     private lateinit var txtModelo: TextView
-    private lateinit var txtAño: TextView
+    private lateinit var txtAnio: TextView
     private lateinit var txtDeuda: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,24 +42,24 @@ class LeerPlacaQrScanner : AppCompatActivity() {
 
         //Info del dialog
         val dialogView = layoutInflater.inflate(R.layout.car_info_modal, null)
-        txtMarca = dialogView.findViewById(R.id.txtCarInfoModelo)
+        txtMarca = dialogView.findViewById(R.id.txtCarInfoMarca)
         txtModelo = dialogView.findViewById(R.id.txtCarInfoModelo)
-        txtAño = dialogView.findViewById(R.id.txtCarInfoModelo)
-        txtDeuda = dialogView.findViewById(R.id.txtCarInfoModelo)
+        txtAnio = dialogView.findViewById(R.id.txtCarInfoAnio)
+        txtDeuda = dialogView.findViewById(R.id.txtCarInfoDeuda)
 
         codeScanner.decodeCallback = DecodeCallback{
             runOnUiThread {
-                Toast.makeText(this, "Scan Result: ${it.text}", Toast.LENGTH_LONG).show()
-                val intent = Intent(this, DetailQrCode::class.java)
-                intent.putExtra("qrCodeValue", it.text)
+
+                AlertDialog.Builder(this).setView(dialogView).setTitle("Car Info Dialog").show()
+
                 val str = it.text
                 val delim = ","
                 val list = str.split(delim)
 
-                txtMarca.text = "Marca ${list[0]}"
-                txtModelo.text = "Marca ${list[1]}"
-                txtAño.text = "Marca ${list[2]}"
-                txtDeuda.text = "Marca ${list[3]}"
+                txtMarca.text = "Marca: ${list[0]}"
+                txtModelo.text = "Modelo: ${list[1]}"
+                txtAnio.text = "Año: ${list[2]}"
+                txtDeuda.text = "Deuda:  ${list[3]}"
 
                 codeScanner.stopPreview()
             }

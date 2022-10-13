@@ -16,7 +16,6 @@ class SegundoParcialAplication : AppCompatActivity() {
     private lateinit var btnCerrarSesion: Button
     private lateinit var btnCerrar: Button
     private lateinit var btnWebPage: Button
-    private lateinit var webView: WebView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,13 +24,15 @@ class SegundoParcialAplication : AppCompatActivity() {
         btnAbout = findViewById(R.id.btnSegundoParcialAcercaDe)
         btnCerrarSesion = findViewById(R.id.btnSegundoParcialCerrarSesion)
 
+
         val dialogView = layoutInflater.inflate(R.layout.about_dialog, null)
+        val mBuilder = AlertDialog.Builder(this).setView(dialogView).setTitle("About").create()
         btnCerrar = dialogView.findViewById(R.id.btnAboutDialogCerrar)
         btnWebPage = dialogView.findViewById(R.id.btnAboutDialogWebPage)
 
 
         btnCerrar.setOnClickListener {
-
+            mBuilder.dismiss()
         }
 
         btnWebPage.setOnClickListener {
@@ -48,7 +49,7 @@ class SegundoParcialAplication : AppCompatActivity() {
         }
 
         btnAbout.setOnClickListener {
-            AlertDialog.Builder(this).setView(dialogView).setTitle("About").show()
+            mBuilder.show()
         }
 
         btnCerrarSesion.setOnClickListener {
